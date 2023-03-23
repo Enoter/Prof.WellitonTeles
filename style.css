@@ -16,6 +16,7 @@
 }
 
 body{
+    width: 100vw;
     box-sizing: border-box;
     background-color: var(--cor-secundaria);
     color: var(--cor-primaria);
@@ -23,13 +24,12 @@ body{
 }
 
 .cabecalho{
-    padding: 15px 0  15px  25px; 
+    padding: 1% 0%  1%  5%; 
     background-color: var(--cor-primaria);
- 
 }
 .cebecalho__menu{
     display: flex;
-    gap: 80px;
+    gap: 5%;
 }
 .cebecalho__menu__link{
     text-decoration: none;;
@@ -56,7 +56,7 @@ body{
     padding: 15px 0 0 0;
 }
 
-.principal__div{
+.principal__sections{
     font-family: var(--fonte-primaria);
     padding: 5% 15%;
     display: flex;
@@ -80,6 +80,48 @@ body{
 .rodape{
     background-color: var(--cor-primaria);
     color: var(--cor-terciaria);
-    padding: 15px;
     font-family: var(--fonte-primaria);
+    padding: 24px;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+.rodape__link{
+    color: var(--cor-terciaria);
+    font-family: var(--fonte-primaria);
+    text-decoration: none;
+}
+
+.rodape__link:hover{
+    text-shadow: 0 0 0 5px var(--cor-terciaria),
+    0 0 0 25px var(--cor-terciaria);
+}
+
+@media (max-width: 1200px){
+    .cabecalho{
+        padding: 1%;
+    }
+    .cabecalho__menu{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        padding: 5%;
+        gap: 5px;
+    }
+    .principal__sections{
+        flex-direction: column;
+        padding: 5%;      
+    }
+    .principal__section{
+        width: auto;
+    }
+}
+
+@media (max-width: 650px){
+    .cebecalho__menu__link{
+        font-size: 1.2rem;
+    }
 }
